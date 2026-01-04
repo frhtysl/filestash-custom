@@ -1,7 +1,16 @@
 package plugin
 
+const buildMarker = "custom_build_260104"
+
 import (
 	. "github.com/mickael-kerjean/filestash/server/common"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_adobe"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_3d"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_creative"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_office"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_photography"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_3d"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_office"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_authenticate_htpasswd"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_authenticate_ldap"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_authenticate_local"
@@ -29,19 +38,27 @@ import (
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_backend_tmp"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_backend_url"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_backend_webdav"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_backend_versioning"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_chroot"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_editor_wopi"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_handler_console"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_handler_mcp"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_handler_site"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_image_ascii"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_image_c"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_image_transcode"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_license"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_metadata_sqlite"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_search_stateless"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_security_scanner"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_security_svg"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_starter_http"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_starter_web"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_theme_apple"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_video_transcoder"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_video_thumbnail"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_workflow_n8n"
+	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_workflow_zapier"
 )
 
 func init() {
