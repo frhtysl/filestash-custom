@@ -1,9 +1,9 @@
 # STEP1: CLONE THE CODE
-FROM alpine/git as builder_prepare
+FROM alpine/git AS builder_prepare
 WORKDIR /home/
 ARG GIT_REPO=https://github.com/frhtysl/filestash-custom
 ARG GIT_BRANCH=master
-RUN git clone --depth 1 --single-branch --branch ${GIT_BRANCH} ${GIT_REPO}
+RUN git clone --depth 1 --single-branch --branch ${GIT_BRANCH} ${GIT_REPO} filestash
 
 # STEP2: BUILD BACKEND
 FROM golang:1.24-trixie AS builder_backend
@@ -19,7 +19,7 @@ RUN apt-get update > /dev/null && \
 
 # STEP3: BUILD PROD IMAGE
 FROM debian:stable-slim
-MAINTAINER mickael@kerjean.me
+LABEL maintainer="mickael@kerjean.me"
 WORKDIR /app/
 COPY --from=builder_backend /home/filestash/dist/ .
 RUN apt-get update > /dev/null && \
