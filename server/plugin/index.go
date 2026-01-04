@@ -1,7 +1,5 @@
 package plugin
 
-const buildMarker = "custom_build_260104"
-
 import (
 	. "github.com/mickael-kerjean/filestash/server/common"
 	_ "github.com/mickael-kerjean/filestash/server/plugin/plg_application_adobe"
